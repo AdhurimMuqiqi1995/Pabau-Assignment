@@ -16,3 +16,18 @@ shuffleButton.addEventListener('click', function() {
       container.appendChild(checkbox.parentNode);
     });
   })
+
+  changeValueButton.addEventListener('click', function() {
+    outputDiv.innerHTML = "";
+  
+    const newValues = ['Adhurim', 'New', 'Internship', 'Pabau'];
+  
+    checkboxes.forEach(function(checkbox, index) {
+      checkbox.checked = false; // Uncheck the checkbox
+      checkbox.value = newValues[index] || '';
+      const label = checkbox.parentNode;
+      label.innerHTML = '';
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(checkbox.value));
+    });
+  });

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Task (Pabau)</title>
+
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #buttonContainer {
+            position: fixed;
+            top: 150px;
+            left: 20px;
+        }
+
+        #output {
+            position: fixed;
+            top: 170px;
+            left: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="myForm">
+        <div>
+            <label>
+                <input type="checkbox" name="checkbox" value="Internship"> Internship
+            </label>
+            <label>
+                <input type="checkbox" name="checkbox" value="Pabau"> Pabau
+            </label>
+            <label>
+                <input type="checkbox" name="checkbox" value="Employment"> Employment
+            </label>
+            <label>
+                <input type="checkbox" name="checkbox" value="Career"> Career
+            </label>
+        </div>
+    </form>
+
+    <div id="buttonContainer">
+        <button type="button" id="shuffleButton">Shuffle Values</button>
+        <button type="button" id="changeValueButton">Change Values</button>
+        <button type="button" id="showSelectedButton">Show selected values</button>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

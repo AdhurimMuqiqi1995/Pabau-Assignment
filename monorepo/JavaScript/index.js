@@ -23,7 +23,7 @@ shuffleButton.addEventListener('click', function() {
     const newValues = ['Adhurim', 'New', 'Internship', 'Pabau'];
   
     checkboxes.forEach(function(checkbox, index) {
-      checkbox.checked = false; // Uncheck the checkbox
+      checkbox.checked = false; 
       checkbox.value = newValues[index] || '';
       const label = checkbox.parentNode;
       label.innerHTML = '';
@@ -31,3 +31,11 @@ shuffleButton.addEventListener('click', function() {
       label.appendChild(document.createTextNode(checkbox.value));
     });
   });
+
+  showSelectedButton.addEventListener('click', function() {
+    const selectedValues = Array.from(checkboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+
+    outputDiv.textContent = `Selected values: ${selectedValues.join(', ')}`;
+});

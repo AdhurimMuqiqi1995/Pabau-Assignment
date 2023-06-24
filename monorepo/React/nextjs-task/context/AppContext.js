@@ -9,7 +9,6 @@ export const AppProvider = ({ children }) => {
 
   const handleSelectOption = (optionId) => {
     setSelectedOption(optionId);
-    setStep(step + 1);
   };
   
   return (
